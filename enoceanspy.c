@@ -55,8 +55,8 @@ main( int argc, char *argv[] )
 
 
 	// Check content of args	
-	if ((strcmp(argv[1], "/dev/ttyUSB0") != 0) 
-		&& (strcmp(argv[1], "/dev/ttyAMA0") !=0) )
+	if ((strncmp(argv[1], "/dev/ttyUSB0", 11) != 0) 
+		&& (strncmp(argv[1], "/dev/ttyAMA0", 11) !=0) )
 	{
 		printf("Error: %s is not a valid port name!\n", argv[1]);
 		return -1;

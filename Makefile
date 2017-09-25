@@ -1,13 +1,13 @@
-prog: EnOceanSpy.o
-	gcc -m32 -o EnOceanSpy EnOceanSpy.o
+prog: enoceanspy.o
+	gcc -m32 -o enoceanspy enoceanspy.o
 
-EnOceanSpy.o: EnOceanSpy.c
-	gcc -m32 -c EnOceanSpy.c
+enoceanspy.o: enoceanspy.c
+	gcc -m32 -c enoceanspy.c
 
 clean: 
-	rm EnOceanSpy.o EnOceanSpy
+	rm enoceanspy.o enoceanspy
 
 dist:
-	tar -cf enoceanspy_raspi.tar EnOceanSpy EnOceanSpy.c LICENSE README.md
+	tar -cf enoceanspy_raspi.tar enoceanspy enoceanspy.c LICENSE README.md
 	gzip enoceanspy_raspi.tar
  
