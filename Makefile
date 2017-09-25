@@ -1,8 +1,8 @@
 prog: EnOceanSpy.o
-	gcc -o EnOceanSpy EnOceanSpy.o
+	gcc -m32 -o EnOceanSpy EnOceanSpy.o
 
 EnOceanSpy.o: EnOceanSpy.c
-	gcc -c EnOceanSpy.c
+	gcc -m32 -c EnOceanSpy.c
 
 clean: 
 	rm EnOceanSpy.o EnOceanSpy
