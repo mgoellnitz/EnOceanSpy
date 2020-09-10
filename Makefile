@@ -1,7 +1,13 @@
 prog: enoceanspy.o
-	gcc -m32 -o enoceanspy enoceanspy.o
+	gcc -o enoceanspy enoceanspy.o
 
 enoceanspy.o: enoceanspy.c
+	gcc -c enoceanspy.c
+
+prog32: enoceanspy.o
+	gcc -m32 -o enoceanspy enoceanspy.o
+
+enoceanspy32.o: enoceanspy.c
 	gcc -m32 -c enoceanspy.c
 
 clean: 
